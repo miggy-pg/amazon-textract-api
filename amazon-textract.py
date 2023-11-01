@@ -1,7 +1,6 @@
 import boto3
 import datetime
 import os
-import requests
 import time
 
 from PIL import Image, ImageDraw
