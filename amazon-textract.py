@@ -8,6 +8,21 @@ from PIL import Image, ImageDraw
 
 
 def process_text_detection(client, document):
+    """
+    Process text detection on an image.
+
+    :param client: boto3.client
+        An instance of the Textract client used to interact with the Textract API.
+    :param document: str
+        The path to the image document that will be processed for text detection.
+
+    :return: int
+        The number of text blocks detected in the image.
+
+    This function reads the image at the specified document path and performs text detection on it using the provided Textract client.
+    It returns the number of text blocks detected in the image.
+    """
+
     try:
         with open(document, "rb") as image:
             start_time = datetime.datetime.now()
