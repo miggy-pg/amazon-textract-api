@@ -114,7 +114,7 @@ def process_text_detection(client, document):
 
 
 def main():
-    session = boto3.Session(profile_name="kadakareer-dev")
+    session = boto3.Session(profile_name="profile-name")
     client = session.client("textract", region_name="us-east-1")
 
     image_path = "/home/miggy/PycharmProjects/extraTextFromImage/images/"
